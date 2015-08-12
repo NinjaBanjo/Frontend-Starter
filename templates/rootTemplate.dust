@@ -1,0 +1,7 @@
+<section>
+    <nav id="nav">
+        <div class="home">Home</div>
+        <div class="about">About</div>
+    </nav>
+    <div id="content"></div>
+</section>
