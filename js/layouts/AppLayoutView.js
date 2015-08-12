@@ -1,11 +1,18 @@
 import Marionette from 'backbone.marionette';
 import rootTemplate from '../../templates/rootTemplate.dust';
 
-export default Marionette.LayoutView.extend({
-  el: 'body',
-  template: rootTemplate,
-  regions: {
-    nav: '#nav',
-    content: '#content'
+class AppLayoutView extends Marionette.LayoutView {
+  constructor(...rest) {
+    super(...rest)
+    this.template = rootTemplate;
+    this.regionManager.addRegions({
+      nav: '#nav',
+      content: '#content'
+    })
   }
-});
+  get el() {
+    return 'body';
+  }
+}
+
+export default AppLayoutView;

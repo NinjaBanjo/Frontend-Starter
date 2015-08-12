@@ -1,3 +1,5 @@
 import Marionette from 'backbone.marionette';
 
-export default Marionette.LayoutView.extend({});
+class ContentView extends Marionette.LayoutView {}
+
+export default ContentView

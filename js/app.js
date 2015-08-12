@@ -1,15 +1,17 @@
-require(['jquery', 'backbone', 'backbone.marionette'], function($, Backbone, Marionette) {
-  var App = Marionette.Application.extend({
-    initialize: function(options) {
-      this.mergeOptions(options, {name: 'Potato'})
-    }
-  });
+import $ from 'jquery';
+import Backbone from 'backbone';
+import Marionette from 'backbone.marionette';
 
-  var app = new App({container: '#app'});
+class App extends Marionette.Application {
+  initialize(options) {
+    this.mergeOptions(options, {name: 'Potato'})
+  }
+}
 
-  app.on('start', function() {
-    Backbone.history.start();
-  });
+const app = new App();
 
-  module.exports = app;
+app.on('start', function() {
+  Backbone.history.start();
 });
+
+export default app;

@@ -11,4 +11,6 @@ App.start();
 // Render and store the root view reference
 App.rootView = new AppLayoutView().render();
 // Attach our contentView to the root view content area
-App.rootView.content.show(new ContentView({template: indexTemplate}));
+App.rootView.content.show(new ContentView({
+  template: indexTemplate
+}));
