@@ -28,8 +28,7 @@ class RouteFactory {
     return new Promise((resolve, reject) => {
       routerObject.routerPromise()
         .then(router => {
-          var newRouter = new router();
-          routerObject.router = newRouter;
+          var newRouter = routerObject.router = new router();
           routerObject.loaded = true;
           resolve(newRouter);
         })
