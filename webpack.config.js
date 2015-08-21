@@ -1,12 +1,13 @@
 var path = require('path');
 var webpack = require('webpack');
+var Clean = require('clean-webpack-plugin');
 
 var PROD = (process.env.PROD);
 
 var config = {
   entry: {
     index: './js/index',
-    vendor: ['jquery', 'backbone', 'backbone.marionette', 'dustjs', resolvePath('/js/helpers/dustMarionetteHelper'), resolvePath('/less/bootstrap.less')]
+    vendor: ['jquery', 'backbone', 'backbone.marionette', 'dustjs', 'bluebird', resolvePath('/js/helpers/dustMarionetteHelper'), resolvePath('/less/bootstrap.less')]
   },
   output: {
     path: path.join(__dirname, '/assets'),
@@ -29,6 +30,7 @@ var config = {
     ]
   },
   plugins: [
+    new Clean(['assets']),
     new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.bundle.js')
   ]
 };
