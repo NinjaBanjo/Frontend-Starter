@@ -37,9 +37,14 @@ class RouteFactory {
   }
 
   matchRouter(url) {
-    const matchedRouters = Object.keys(this.routers).filter((e) => {
-      return (url.indexOf(e) === 0);
-    });
+    const matchedRouters = Object.keys(this.routers)
+      // Make sure our keys are ordered longest first
+      .sort((a, b) => {
+        return b.length - a.length;
+      })
+      .filter(e => {
+        return (url.indexOf(e) === 0);
+      });
 
     if (matchedRouters.length > 0) {
       // If we found only 1 matched router, return the routerObject
