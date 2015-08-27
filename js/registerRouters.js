@@ -1,4 +1,4 @@
-import App from './app';
+import App from 'app';
 /*
  Register Routers here.
  Make sure to register to longest routes with matching beginnings first
@@ -6,7 +6,7 @@ import App from './app';
  */
 App.RouterFactory.registerRouter('/', () => {
   return new Promise(resolve => {
-    require(['./routers/IndexRouter'], function(IndexRouter) {
+    require(['index/routers/IndexRouter'], function(IndexRouter) {
       resolve(IndexRouter);
     });
   });

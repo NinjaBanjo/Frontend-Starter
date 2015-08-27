@@ -1,0 +1,5 @@
+{?name}
+    Hello, this is name
+{/name}
+
+<span>and some other stuff too</span>

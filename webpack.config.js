@@ -15,6 +15,8 @@ var config = {
     publicPath: '/assets/'
   },
   resolve: {
+    root: [path.resolve('./js'), path.resolve('./js/modules'), path.resolve('./less')],
+    extensions: ['', '.js'],
     alias: {
       underscore: 'lodash',
       dustjs: 'dustjs-linkedin'
@@ -32,7 +34,13 @@ var config = {
   plugins: [
     new Clean(['assets']),
     new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.bundle.js')
-  ]
+  ],
+  devServer: {
+    contentBase: './assets',
+    hot: true,
+    inline: true,
+    noInfo: true
+  }
 };
 
 if(PROD) {

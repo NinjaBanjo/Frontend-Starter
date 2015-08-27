@@ -1,5 +1,5 @@
 import Marionette from 'backbone.marionette';
-import rootTemplate from '../../templates/rootTemplate.dust';
+import rootTemplate from 'base/templates/rootTemplate.dust';
 
 class AppLayoutView extends Marionette.LayoutView {
   constructor(...rest) {

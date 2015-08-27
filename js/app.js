@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import Backbone from 'backbone';
 import Marionette from 'backbone.marionette';
-import RouterFactory from './factories/RouterFactory';
+import RouterFactory from 'factories/RouterFactory';
 
 class App extends Marionette.Application {
   initialize(options) {

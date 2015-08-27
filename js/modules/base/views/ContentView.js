@@ -1,5 +1,5 @@
 import Marionette from 'backbone.marionette';
-import MarionetteHelpers from '../helpers/MarionetteHelpers';
+import MarionetteHelpers from 'helpers/MarionetteHelpers';
 
 class ContentView extends Marionette.LayoutView {
   constructor(...rest) {

@@ -1,18 +1,10 @@
 import $ from 'jquery';
 import Promise from 'bluebird';
-import App from './app';
-import AppLayoutView from './layouts/AppLayoutView';
-import ContentView from './views/ContentView';
-// Load the styles
-require('../less/bootstrap.less');
-require('../less/app.less');
+import App from 'app';
+import AppLayoutView from 'base/layouts/AppLayoutView';
+import Setup from 'Setup';
 
-// Make jQuery available on window
-window.$ = window.jQuery = $;
-
-// Bootstrap javascript
-require('bootstrap/js/collapse.js');
-require('bootstrap/js/dropdown.js');
+Setup.setupUiLibs();
 
 require('./registerRouters');
 

@@ -1,5 +1,5 @@
 import Marionette from 'backbone.marionette';
-import IndexController from '../controllers/IndexController';
+import IndexController from 'index/controllers/IndexController';
 
 // Store a new instance so it's not create every time
 const indexController = new IndexController;
